@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silvion - Menu</title>
+    <link rel="icon" href="../images/logotipa231.png" type="image/png">
+    <link rel="stylesheet" href="../style/style.css">
+    <script src="../javascript/magia.js" defer></script>
+    <link href='https://fonts.googleapis.com/css?family=Cinzel Decorative' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="backimg">
+
+    <section>
+        <nav id="navbar">
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul>
+                <li><a href="aboutus.html">About us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li class="whyus_first_grade"><a href="whyus.html">WHY US</a></li>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#contactus">Contact us</a></li>
+            </ul>
+            <div class="icon" id="cartIcon">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+
+            <div class="contact-phone">
+    <a href="tel:+37360262000">
+        <i class="fa-solid fa-phone"></i> +373 60 262 000
+    </a>
+</div>
+        </nav>
+
+
+        <h1 class="titlumenu">Menu</h1>
+   
+        <p class="menudescriere">Meniul combină preparate tradiționale moldovenești cu opțiuni moderne, pentru a
+            satisface toate gusturile.
+             <span class="highlight-menu">
+                Pe lângă meniul prestabilit, preparăm bucate la cerere,
+                adaptate preferințelor dumneavoastră.
+                Prețurile pot fi discutate și ajustate în funcție de
+                tipul evenimentului și cerințele specifice. Pentru detalii, ne puteți contacta!
+            </span>
+           </p>
+
+<div class="services-divider"></div>
+
+
+
+
+        <details class="mancarecalda">
+            <summary>Gustări reci / aperitive</summary>
+            <div class="container">
+
+                <div class="card">
+                    <img src="../images/platoumezeluri.jpg" alt="toast">
+                    <div class="title">Platou cu mezeluri</div>
+                    <div class="ingredients">Conține șuncă, salam, pastramă, cârnați - 1kg</div>
+                    <div class="price">Preț: 230 Lei</div>
+                    <div class="quantity">
+                        Cantitate: <input type="number" value="1" min="1">
+                    </div>
+                    <button onclick="addToCart(this.parentElement)">Adaugă în coș</button>
+                </div>
+
+
+
+                <div class="card">
+                    <img src="../images/platoubranzeturi.jpg" alt="toast">
+                    <div class="title">Platou brânzeturi</div>
+                    <div class="ingredients">Ingrediente: cașcaval, brânză tare, telemea, unt - 1kg</div>
+                    <div class="price">Preț: 200 Lei</div>
+                    <div class="quantity">
+                        Cantitate: <input type="number" value="1" min="1">
+                    </div>
+                    <button onclick="addToCart(this.parentElement)">Adaugă în coș</button>
+                </div>
+
+
+                <div class="card">
+                    <img src="../images/salataboeuf.jpg" alt="toast">
+                    <div class="title">Salată Boeuf</div>
+                    <div class="ingredients">Cartofi fierți, morcov, mazăre, salam, maioneză ~1,2kg</div>
+                    <div class="price">Preț: 175 Lei</div>
+                    <div class="quantity">
+                        Cantitate: <input type="number" value="1" min="1">
+                    </div>
+                    <button onclick="addToCart(this.parentElement)">Adaugă în coș</button>
+                </div>
+
+
+                <div class="card">
+                    <img src="../images/salatadepui.jpg" alt="toast">
+                    <div class="title">Salată cu pui</div>
+                    <div class="ingredients">Conține pui, porumb, ou, maioneză, castraveți ~1,2kg</div>
+                    <div class="price">Preț: 190 Lei</div>
+                    <div class="quantity">
+                        Cantitate: <input type="number" value="1" min="1">
+                    </div>
+                    <button onclick="addToCart(this.parentElement)">Adaugă în coș</button>
+                </div>
+
+
+
+                <div class="card">
+                    <img src="../images/platoulegume.png" alt="toast">
+                    <div class="title">Legume proaspete</div>
+                    <div class="ingredients">Conține roșii, castraveți, ardei, verdeață - 1kg</div>
+                    <div class="price">Preț: 130 Lei</div>
+                    <div class="quantity">
+                        Cantitate: <input type="number" value="1" min="1">
+                    </div>
+                    <button onclick="addToCart(this.parentElement)">Adaugă în coș</button>
+                </div>
+
+
+                <div class="card">
+                    <img src="../images/pestemarinat.jpg" alt="toast">
+                    <div class="title">Pește marinat</div>
+                    <div class="ingredients">Ingrediente: hering, ceapă, ulei, condimente, măsline - 1kg</div>
+                    <div class="price">Preț: 210 Lei</div>
+                    <div class="quantity">
+                        Cantitate: <input type="number" value="1" min="1">
+                    </div>
+                    <button onclick="addToCart(this.parentElement)">Adaugă în coș</button>
+                </div>
+
+
+                <div class="card">
+                    <img src="../images/rulourivinete.jpg" alt="toast">
+                    <div class="title">Rulouri din vinete</div>
+                    <div class="ingredients">Ingrediente: vinete, cremă de brânză, usturoi, castraveți ~25 buc.</div>
+                    <div class="price">Preț: 265 Lei</div>
+                    <div class="quantity">
+                        Cantitate: <input type="number" value="1" min="1">
+                    </div>
+                    <button onclick="addToCart(this.parentElement)">Adaugă în coș</button>
+                </div>
+
+
+                <div class="card">
+                    <img src="../images/salatasuba.jpg" alt="toast">
+                    <div class="title">Salată Șuba</div>
+                    <div class="ingredients">Hering, cartofi, morcov, sfeclă, ceapă, maioneză ~1,1kg</div>
+                    <div class="price">Preț: 210 Lei</div>
+                    <div class="quantity">
+                        Cantitate: <input type="number" value="1" min="1">
+                    </div>
+                    <button onclick="addToCart(this.parentElement)">Adaugă în coș</button>
+                </div>
+
+
+                <div class="card">
+                    <img src="../images/rulourisuncasicascaval.jpg" alt="toast">
+                    <div class="title">Rulouri șuncă și cașcaval</div>
+                    <div class="ingredients">Șuncă, cașcaval, verdeață, murături ~25 buc.</div>
+                    <div class="price">Preț: 245 Lei</div>
+                    <div class="quantity">
+                        Cantitate: <input type="number" value="1" min="1">
+                    </div>
+                    <button onclick="addToCart(this.parentElement)">Adaugă în coș</button>
+                </div>
+
+                <div class="card">
+                    <img src="../images/bruschette.jpg" alt="toast">
+                    <div class="title">Bruschette cu pateu</div>
+                    <div class="ingredients">Ingredinte: baghetă cu pateu de ficat, verdeață, roșii cherry ~35 buc.
+                    </div>
+                    <div class="price">Preț: 280 Lei</div>
+                    <div class="quantity">
+                        Cantitate: <input type="number" value="1" min="1">
+                    </div>
+                    <button onclick="addToCart(this.parentElement)">Adaugă în coș</button>
+                </div>
+            </div>
+        </details>
+
+
+
+
+
+
+        <details class="mancarecalda">
+            <summary>Feluri calde / principale</summary>
+            <div class="container">
+                <div class="card">
+                    <img src="../images/sniteldepui.jpg" alt="toast">
+                    <div class="title">Șnițel de pui</div>
+                    <div class="ingredients">Ingrediente: piept de pui, ou, pesmet - 1kg</div>
+                    <div class="price">Preț: 240 Lei</div>
+                    <div class="quantity">
+                        Cantitate: <input type="number" value="1" min="1">
+                    </div>
+                    <button onclick="addToCart(this.parentElement)">Adaugă în coș</button>
+                </div>
+
+                <div class="card">
+                    <img src="../images/puilacuptor.webp" alt="toast">
+                    <div class="title">Pui la cuptor</div>
+                    <div class="ingredients">Ingrediente: pulpă/piept de pui, condimente - 1kg</div>
+                    <div class="price">Preț: 255 Lei</div>
+                    <div class="quantity">
+                        Cantitate: <input type="number" value="1" min="1">
+                    </div>
+                    <button onclick="addToCart(this.parentElement)">Adaugă în coș</button>
+                </div>
+
+                <div class="card">
+                    <img src="../images/fripturadeporc.webp" alt="toast">
+                    <div class="title">Friptură de porc</div>
+                    <div class="ingredients">Ingrediente: ceafă de porc, usturoi, condimente - 1kg</div>
+                    <div class="price">Preț: 340 Lei</div>
+                    <div class="quantity">
+                        Cantitate: <input type="number" value="1" min="1">
+                    </div>
+                    <button onclick="addToCart(this.parentElement)">Adaugă în coș</button>
+                </div>
+
+
+                <div class="card">
+                    <img src="../images/parjoale.jpg" alt="toast">
+                    <div class="title">Pârjoale</div>
+                    <div class="ingredients">Ingrediente: carne tocată, ceapă, ou, pâine ~22buc.</div>
+                    <div class="price">Preț: 215 Lei</div>
+                    <div class="quantity">
+                        Cantitate: <input type="number" value="1" min="1">
+                    </div>
+                    <button onclick="addToCart(this.parentElement)">Adaugă în coș</button>
+                </div>
+
+                <div class="card">
+                    <img src="../images/rulouridecarne.jpg" alt="toast">
+                    <div class="title">Rulou de carne</div>
+                    <div class="ingredients">Ingrediente: carne tocată, ou, cașcaval - 1kg</div>
+                    <div class="price">Preț: 285 Lei</div>
+                    <div class="quantity">
+                        Cantitate: <input type="number" value="1" min="1">
+                    </div>
+                    <button onclick="addToCart(this.parentElement)">Adaugă în coș</button>
+                </div>
+
+                <div class="card">
+                    <img src="../images/pesteprajit.jpg" alt="toast">
+                    <div class="title">Pește prăjit</div>
+                    <div class="ingredients">Ingrediente: file de pește, făină, lămâie - 1kg</div>
+                    <div class="price">Preț: 375 Lei</div>
+                    <div class="quantity">
+                        Cantitate: <input type="number" value="1" min="1">
+                    </div>
+                    <button onclick="addToCart(this.parentElement)">Adaugă în coș</button>
+                </div>
+
+                <div class="card">
+                    <img src="../images/sarmale2.jpg" alt="toast">
+                    <div class="title">Sarmale</div>
+                    <div class="ingredients">Ingrediente: carne tocată, orez, varză - 1kg/~25 buc.</div>
+                    <div class="price">Preț: 225 Lei</div>
+                    <div class="quantity">
+                        Cantitate: <input type="number" value="1" min="1">
+                    </div>
+                    <button onclick="addToCart(this.parentElement)">Adaugă în coș</button>
+                </div>
+
+
+                <div class="card">
+                    <img src="../images/ciorbadelegumecupui.webp" alt="toast">
+                    <div class="title">Ciorbă de legume</div>
+                    <div class="ingredients">Pui, morcov, cartofi, țelină, verdeață, condimente ~5L</div>
+                    <div class="price">Preț: 240 Lei</div>
+                    <div class="quantity">
+                        Cantitate: <input type="number" value="1" min="1">
+                    </div>
+                    <button onclick="addToCart(this.parentElement)">Adaugă în coș</button>
+                </div>
+
+                <div class="card">
+                    <img src="../images/zeamadepui.jpeg" alt="toast">
+                    <div class="title">Zeamă de pui</div>
+                    <div class="ingredients">Pui, morcov, țelină, ceapă, pătrunjel, leuștean, tăiței ~5L</div>
+                    <div class="price">Preț: 275 Lei</div>
+                    <div class="quantity">
+                        Cantitate: <input type="number" value="1" min="1">
+                    </div>
+                    <button onclick="addToCart(this.parentElement)">Adaugă în coș</button>
+                </div>
+
+
+
+
+
+
+
+
+
+
+            </div>
+        </details>
+
+
+        <details class="mancarecalda">
+            <summary>Salate</summary>
+            <div class="container">
+                <div class="card">
+                    <img src="../images/salatadevarza.jpg" alt="toast">
+                    <div class="title">Salată de varză</div>
+                    <div class="ingredients">Ingrediente: varză, morcov, ulei, sare, oțet, ceapă, verdețuri - 1kg</div>
+                    <div class="price">Preț: 60 Lei</div>
+                    <div class="quantity">
+                        Cantitate: <input type="number" value="1" min="1">
+                    </div>
+                    <button onclick="addToCart(this.parentElement)">Adaugă în coș</button>
+                </div>
+
+                <div class="card">
+                    <img src="../images/salatadesfecla.jpg" alt="toast">
+                    <div class="title">Salată de sfeclă</div>
+                    <div class="ingredients">Ingrediente: sfeclă fiartă, usturoi, ulei, oțet, ceapă, portocală - 1kg
+                    </div>
+                    <div class="price">Preț: 75 Lei</div>
+                    <div class="quantity">
+                        Cantitate: <input type="number" value="1" min="1">
+                    </div>
+                    <button onclick="addToCart(this.parentElement)">Adaugă în coș</button>
+                </div>
+
+                <div class="card">
+                    <img src="../images/salatagreceasca.webp" alt="toast">
+                    <div class="title">Salată grecească</div>
+                    <div class="ingredients">Ingrediente: roșii, castraveți, brânză feta, măsline, ceapă - 1kg</div>
+                    <div class="price">Preț: 145 Lei</div>
+                    <div class="quantity">
+                        Cantitate: <input type="number" value="1" min="1">
+                    </div>
+                    <button onclick="addToCart(this.parentElement)">Adaugă în coș</button>
+                </div>
+
+
+                <div class="card">
+                    <img src="../images/salatamixta.jpg" alt="toast">
+                    <div class="title">Salată mixtă</div>
+                    <div class="ingredients">Ingrediente: roșii, castraveți, ardei, salată verde, ceapă - 1kg</div>
+                    <div class="price">Preț: 95 Lei</div>
+                    <div class="quantity">
+                        Cantitate: <input type="number" value="1" min="1">
+                    </div>
+                    <button onclick="addToCart(this.parentElement)">Adaugă în coș</button>
+                </div>
+
+                <div class="card">
+                    <img src="../images/salatacuciuperci.jpg" alt="toast">
+                    <div class="title">Salată cu ciuperci</div>
+                    <div class="ingredients">Ingrediente: ciuperci, ceapă, maioneză, condimente, verdeață - 1kg</div>
+                    <div class="price">Preț: 115 Lei</div>
+                    <div class="quantity">
+                        Cantitate: <input type="number" value="1" min="1">
+                    </div>
+                    <button onclick="addToCart(this.parentElement)">Adaugă în coș</button>
+                </div>
+
+                <div class="card">
+                    <img src="../images/salatacuton.jpg" alt="toast">
+                    <div class="title">Salată cu ton</div>
+                    <div class="ingredients">Ingrediente: ton, porumb, maioneză, castraveți, ceapă - 1kg</div>
+                    <div class="price">Preț: 185 Lei</div>
+                    <div class="quantity">
+                        Cantitate: <input type="number" value="1" min="1">
+                    </div>
+                    <button onclick="addToCart(this.parentElement)">Adaugă în coș</button>
+                </div>
+
+                <div class="card">
+                    <img src="../images/salatadepuicuananas.jpg" alt="toast">
+                    <div class="title">Salată de pui cu ananasă</div>
+                    <div class="ingredients">Ingrediente: piept de pui, ananas, maioneză - 1kg</div>
+                    <div class="price">Preț: 125 Lei</div>
+                    <div class="quantity">
+                        Cantitate: <input type="number" value="1" min="1">
+                    </div>
+                    <button onclick="addToCart(this.parentElement)">Adaugă în coș</button>
+                </div>
+
+
+                <div class="card">
+                    <img src="../images/mimoza.jpg" alt="toast">
+                    <div class="title">Salată „Mimoza”</div>
+                    <div class="ingredients">Conține cartofi fierți, morcov, ou, pește, ceapă, maioneză - 1kg</div>
+                    <div class="price">Preț: 95 Lei</div>
+                    <div class="quantity">
+                        Cantitate: <input type="number" value="1" min="1">
+                    </div>
+                    <button onclick="addToCart(this.parentElement)">Adaugă în coș</button>
+                </div>
+
+
+            </div>
+        </details>
+
+
+
+
+
+
+        <details class="mancarecalda">
+            <summary>Garnituri</summary>
+            <div class="container">
+                <div class="card">
+                    <img src="../images/piure.webp" alt="toast">
+                    <div class="title">Cartofi piure</div>
+                    <div class="ingredients">Ingrediente: cartofi, unt, lapte, sare - 1kg</div>
+                    <div class="price">Preț: 65 Lei</div>
+                    <div class="quantity">
+                        Cantitate: <input type="number" value="1" min="1">
+                    </div>
+                    <button onclick="addToCart(this.parentElement)">Adaugă în coș</button>
+                </div>
+
+                <div class="card">
+                    <img src="../images/cartofiprajiti.webp" alt="toast">
+                    <div class="title">Cartofi prăjiți</div>
+                    <div class="ingredients">Ingrediente: cartofi, ulei de floarea-soarelui, sare - 1kg</div>
+                    <div class="price">Preț: 85 Lei</div>
+                    <div class="quantity">
+                        Cantitate: <input type="number" value="1" min="1">
+                    </div>
+                    <button onclick="addToCart(this.parentElement)">Adaugă în coș</button>
+                </div>
+
+                <div class="card">
+                    <img src="../images/orezculegume.jpg" alt="toast">
+                    <div class="title">Orez cu legume</div>
+                    <div class="ingredients">Ingrediente: orez, morcov, ardei, mazăre, ulei - 1kg</div>
+                    <div class="price">Preț: 70 Lei</div>
+                    <div class="quantity">
+                        Cantitate: <input type="number" value="1" min="1">
+                    </div>
+                    <button onclick="addToCart(this.parentElement)">Adaugă în coș</button>
+                </div>
+
+
+                <div class="card">
+                    <img src="../images/legumelagratar.jpg" alt="toast">
+                    <div class="title">Legume la grătar</div>
+                    <div class="ingredients">Dovlecei, vinete, ardei, ceapă, ulei, condimente - 1kg</div>
+                    <div class="price">Preț: 105 Lei</div>
+                    <div class="quantity">
+                        Cantitate: <input type="number" value="1" min="1">
+                    </div>
+                    <button onclick="addToCart(this.parentElement)">Adaugă în coș</button>
+                </div>
+
+                <div class="card">
+                    <img src="../images/mamaliga.webp" alt="toast">
+                    <div class="title">Mămăligă</div>
+                    <div class="ingredients">Ingrediente: mălai, apă, sare, unt, brânză - 1kg</div>
+                    <div class="price">Preț: 50 Lei</div>
+                    <div class="quantity">
+                        Cantitate: <input type="number" value="1" min="1">
+                    </div>
+                    <button onclick="addToCart(this.parentElement)">Adaugă în coș</button>
+                </div>
+
+                <div class="card">
+                    <img src="../images/wegdes.jpg" alt="toast">
+                    <div class="title">Cartofi wedges</div>
+                    <div class="ingredients">Ingrediente: cartofi, ulei, ierburi aromatice - 1kg</div>
+                    <div class="price">Preț: 95 Lei</div>
+                    <div class="quantity">
+                        Cantitate: <input type="number" value="1" min="1">
+                    </div>
+                    <button onclick="addToCart(this.parentElement)">Adaugă în coș</button>
+                </div>
+
+                <div class="card">
+                    <img src="../images/conopidagratinata.webp" alt="toast">
+                    <div class="title">Conopidă gratinată</div>
+                    <div class="ingredients">Conopidă, smântână, cașcaval, unt - 1kg</div>
+                    <div class="price">Preț: 125 Lei</div>
+                    <div class="quantity">
+                        Cantitate: <input type="number" value="1" min="1">
+                    </div>
+                    <button onclick="addToCart(this.parentElement)">Adaugă în coș</button>
+                </div>
+
+
+                <div class="card">
+                    <img src="../images/morcovicaramelizati.webp" alt="toast">
+                    <div class="title">Morcovi glazurați</div>
+                    <div class="ingredients">Ingrediente: morcov, unt, zahăr brun, condimente</div>
+                    <div class="price">Preț: 95 Lei</div>
+                    <div class="quantity">
+                        Cantitate: <input type="number" value="1" min="1">
+                    </div>
+                    <button onclick="addToCart(this.parentElement)">Adaugă în coș</button>
+                </div>
+
+
+            </div>
+        </details>
+
+
+        <details class="mancarecalda">
+            <summary>Deserturi</summary>
+            <div class="container">
+                <div class="card">
+                    <img src="../images/tort.jpg" alt="toast">
+                    <div class="title">Tort de eveniment</div>
+                    <div class="ingredients">În funcție de dorințele și preferințele clientului, aspectul diferă ~3kg
+                    </div>
+                    <div class="price">Preț: 650 Lei</div>
+                    <div class="quantity">
+                        Cantitate: <input type="number" value="1" min="1">
+                    </div>
+                    <button onclick="addToCart(this.parentElement)">Adaugă în coș</button>
+                </div>
+
+                <div class="card">
+                    <img src="../images/platouprajituri.webp" alt="toast">
+                    <div class="title">Platou prăjituri</div>
+                    <div class="ingredients">Poate conșine eclere, fursecuri, mini tarte, ciocolată ~1,5kg</div>
+                    <div class="price">Preț: 75 Lei</div>
+                    <div class="quantity">
+                        Cantitate: <input type="number" value="1" min="1">
+                    </div>
+                    <button onclick="addToCart(this.parentElement)">Adaugă în coș</button>
+                </div>
+
+                <div class="card">
+                    <img src="../images/cusmaluiguguta.jpeg" alt="toast">
+                    <div class="title">Cușma lui Guguță</div>
+                    <div class="ingredients">Clătite umplute cu vișine, cremă de smântână, vanilie la dorință - 1,5kg
+                    </div>
+                    <div class="price">Preț: 390 Lei</div>
+                    <div class="quantity">
+                        Cantitate: <input type="number" value="1" min="1">
+                    </div>
+                    <button onclick="addToCart(this.parentElement)">Adaugă în coș</button>
+                </div>
+
+
+                <div class="card">
+                    <img src="../images/negresacunuca.webp" alt="toast">
+                    <div class="title">Negresă cu nucă</div>
+                    <div class="ingredients">Conține cacao, făină, ouă, zahăr, unt, nucă măcinată, glazură de ciocolată
+                        - 1,5kg</div>
+                    <div class="price">Preț: 265 Lei</div>
+                    <div class="quantity">
+                        Cantitate: <input type="number" value="1" min="1">
+                    </div>
+                    <button onclick="addToCart(this.parentElement)">Adaugă în coș</button>
+                </div>
+
+                <div class="card">
+                    <img src="../images/cheesecake.jpg" alt="toast">
+                    <div class="title">Cheesecake</div>
+                    <div class="ingredients">Ingrediente: brânză de vaci sau cremă, biscuiți, frișcă, fructe ~1kg</div>
+                    <div class="price">Preț: 355 Lei</div>
+                    <div class="quantity">
+                        Cantitate: <input type="number" value="1" min="1">
+                    </div>
+                    <button onclick="addToCart(this.parentElement)">Adaugă în coș</button>
+                </div>
+
+                <div class="card">
+                    <img src="../images/platou cu fructe.jpg" alt="toast">
+                    <div class="title">Platou fructe</div>
+                    <div class="ingredients">Ingrediente: pepene, struguri, mere, kiwi, portocale - 2kg</div>
+                    <div class="price">Preț: 230 Lei</div>
+                    <div class="quantity">
+                        Cantitate: <input type="number" value="1" min="1">
+                    </div>
+                    <button onclick="addToCart(this.parentElement)">Adaugă în coș</button>
+                </div>
+
+                <div class="card">
+                    <img src="../images/pavlova.jpg" alt="toast">
+                    <div class="title">Pavlova</div>
+                    <div class="ingredients">Ingrediente: bezea, frișcă, fructe de pădure, kiwi, glazură - 1kg</div>
+                    <div class="price">Preț: 390 Lei</div>
+                    <div class="quantity">
+                        Cantitate: <input type="number" value="1" min="1">
+                    </div>
+                    <button onclick="addToCart(this.parentElement)">Adaugă în coș</button>
+                </div>
+
+
+                <div class="card">
+                    <img src="../images/tartecufructe.jpg" alt="toast">
+                    <div class="title">Tarte cu fructe</div>
+                    <div class="ingredients">Ingrediente: aluat cremos, cremă, frișcă, fructe proaspete - 1kg</div>
+                    <div class="price">Preț: 270 Lei</div>
+                    <div class="quantity">
+                        Cantitate: <input type="number" value="1" min="1">
+                    </div>
+                    <button onclick="addToCart(this.parentElement)">Adaugă în coș</button>
+                </div>
+
+
+                <div class="card">
+                    <img src="../images/tavacudulciuri.avif" alt="toast">
+                    <div class="title">Tavă cu dulciuri</div>
+                    <div class="ingredients">Conține prăjituri de casă, fursecuri, mini eclere, biscuiți cu cremă - 1kg
+                    </div>
+                    <div class="price">Preț: 95 Lei</div>
+                    <div class="quantity">
+                        Cantitate: <input type="number" value="1" min="1">
+                    </div>
+                    <button onclick="addToCart(this.parentElement)">Adaugă în coș</button>
+                </div>
+
+
+                <div class="card">
+                    <img src="../images/tavacufursecuri.webp" alt="toast">
+                    <div class="title">Tavă cu fursecuri de casă</div>
+                    <div class="ingredients">Ingrediente: făină, unt, zahăr, ouă, gem, cacao - 1kg</div>
+                    <div class="price">Preț: 225 Lei</div>
+                    <div class="quantity">
+                        Cantitate: <input type="number" value="1" min="1">
+                    </div>
+                    <button onclick="addToCart(this.parentElement)">Adaugă în coș</button>
+                </div>
+
+
+            </div>
+        </details>
+
+
+        <details class="mancarecalda">
+            <summary>Băuturi</summary>
+            <div class="container">
+                <div class="card">
+                    <img src="../images/vin alb.png" alt="toast">
+                    <div class="title">Vin alb</div>
+                    <div class="ingredients">Vin sec sau demisec produs local - 1L</div>
+                    <div class="price">Preț: 65 Lei</div>
+                    <div class="quantity">
+                        Cantitate: <input type="number" value="1" min="1">
+                    </div>
+                    <button onclick="addToCart(this.parentElement)">Adaugă în coș</button>
+                </div>
+
+                <div class="card">
+                    <img src="../images/vinrosu.jpg" alt="toast">
+                    <div class="title">Vin roșu</div>
+                    <div class="ingredients">Vin sec sau demisec produs local - 1L</div>
+                    <div class="price">Preț: 55 Lei</div>
+                    <div class="quantity">
+                        Cantitate: <input type="number" value="1" min="1">
+                    </div>
+                    <button onclick="addToCart(this.parentElement)">Adaugă în coș</button>
+                </div>
+
+                <div class="card">
+                    <img src="../images/spumant.webp" alt="toast">
+                    <div class="title">Spumant</div>
+                    <div class="ingredients">Vin efervescent, dulce sau sec, cu bule fine - 1L</div>
+                    <div class="price">Preț: 100 Lei</div>
+                    <div class="quantity">
+                        Cantitate: <input type="number" value="1" min="1">
+                    </div>
+                    <button onclick="addToCart(this.parentElement)">Adaugă în coș</button>
+                </div>
+
+
+                <div class="card">
+                    <img src="../images/vodca.webp" alt="toast">
+                    <div class="title">Vodcă</div>
+                    <div class="ingredients">Băutură tare, curată, cu gust neutru - 0,75L</div>
+                    <div class="price">Preț: 135 Lei</div>
+                    <div class="quantity">
+                        Cantitate: <input type="number" value="1" min="1">
+                    </div>
+                    <button onclick="addToCart(this.parentElement)">Adaugă în coș</button>
+                </div>
+
+                <div class="card">
+                    <img src="../images/divin.png" alt="toast">
+                    <div class="title">Divin</div>
+                    <div class="ingredients">Băutură tare, cu note de lemn și fructe uscate - 0,75L</div>
+                    <div class="price">Preț: 165 Lei</div>
+                    <div class="quantity">
+                        Cantitate: <input type="number" value="1" min="1">
+                    </div>
+                    <button onclick="addToCart(this.parentElement)">Adaugă în coș</button>
+                </div>
+
+                <div class="card">
+                    <img src="../images/sucnaturalis.png" alt="toast">
+                    <div class="title">Sucuri</div>
+                    <div class="ingredients">Sucuri naturale, cu pulpă și fără - 1L</div>
+                    <div class="price">Preț: 25 Lei</div>
+                    <div class="quantity">
+                        Cantitate: <input type="number" value="1" min="1">
+                    </div>
+                    <button onclick="addToCart(this.parentElement)">Adaugă în coș</button>
+                </div>
+
+                <div class="card">
+                    <img src="../images/limonadadecasa.jpg" alt="toast">
+                    <div class="title">Limonadă de casă</div>
+                    <div class="ingredients">Răcoritoare, dulce-acrișoară, cu aromă de lămâie - 1,5L</div>
+                    <div class="price">Preț: 25 Lei</div>
+                    <div class="quantity">
+                        Cantitate: <input type="number" value="1" min="1">
+                    </div>
+                    <button onclick="addToCart(this.parentElement)">Adaugă în coș</button>
+                </div>
+
+
+                <div class="card">
+                    <img src="../images/succarbogazos.jpg" alt="toast">
+                    <div class="title">Băuturi carbogazoase</div>
+                    <div class="ingredients">Cola, suc de fructe, etc - 1,5L</div>
+                    <div class="price">Preț: 20 Lei</div>
+                    <div class="quantity">
+                        Cantitate: <input type="number" value="1" min="1">
+                    </div>
+                    <button onclick="addToCart(this.parentElement)">Adaugă în coș</button>
+                </div>
+
+
+                <div class="card">
+                    <img src="../images/ceai.jpg" alt="toast">
+                    <div class="title">Ceai / infuziii</div>
+                    <div class="ingredients">Ceai negru, verde sau infuzii de plante aromatice </div>
+                    <div class="price">Preț: 50 Lei/pachet</div>
+                    <div class="quantity">
+                        Cantitate: <input type="number" value="1" min="1">
+                    </div>
+                    <button onclick="addToCart(this.parentElement)">Adaugă în coș</button>
+                </div>
+
+
+                <div class="card">
+                    <img src="../images/apaminerala.webp" alt="toast">
+                    <div class="title">Apă minerală</div>
+                    <div class="ingredients">Apă carbogazoasă intens rece - 1,5L</div>
+                    <div class="price">Preț: 15 Lei</div>
+                    <div class="quantity">
+                        Cantitate: <input type="number" value="1" min="1">
+                    </div>
+                    <button onclick="addToCart(this.parentElement)">Adaugă în coș</button>
+                </div>
+
+
+            </div>
+        </details>
+
+
+
+
+    </section>
+
+
+
+    <div class="cart" id="cart">
+        <span class="close-cart">&times;</span>
+        <h3>Coșul tău</h3>
+        <div id="cart-items"></div>
+        <hr>
+        <div id="total">Total: 0 Lei</div>
+        <button id="orderNowBtn">Comandă acum</button>
+    </div>
+    <hr>
+    <div id="title"></div>
+
+
+
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Finalizează comanda</h2>
+            <form id="orderForm">
+                <label>Nume și Prenume:</label>
+                <input type="text" name="name" required>
+
+                <label>Email:</label>
+                <input type="email" name="email" required>
+
+                <label>Telefon:</label>
+                <input type="text" name="phone" required>
+
+                <label>Adresă:</label>
+                <input type="text" name="address" required>
+
+                <label>Mesaj / Notițe:</label>
+                <textarea name="message" rows="4"></textarea>
+
+                <button type="submit">Finalizează comanda</button>
+            </form>
+
+            <div id="orderSummary"></div>
+        </div>
+    </div>
+
+
+
+
+    <footer>
+        <div class="footer_main" id="contactus">
+            <div class="footer_tag">
+                <h2>Adresa</h2>
+                <p>Raionul Leova</p>
+                <p>Tigheci</p>
+                <p>Str. Ștefan cel Mare</p>
+                <p>MD-6329</p>
+            </div>
+
+            <div class="footer_tag">
+                <h2>Quick Link</h2>
+                <a href="aboutus.html">About us</a>
+                <a href="services.html">Services</a>
+                <a href="whyus.html">Why us</a>
+                <a href="menu.html">Menu</a>
+            </div>
+
+            <div class="footer_tag">
+                <h2>Contacte</h2>
+                <p>+373 60 262 000</p>
+                <p>silvion@gmail.com</p>
+            </div>
+
+            <div class="footer_tag">
+                <h2>Serviciile noastre</h2>
+                <p>Livrare rapidă</p>
+                <p>Achitare la primire</p>
+                <p>Receptibilitate</p>
+            </div>
+
+            <div class="footer_tag">
+                <h2>Urmărește-ne</h2>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/p/Silvion-100064272423143/" target="_blank">
+                        <i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.facebook.com/silvia.timofti.1" target="_blank">
+                        <i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.tiktok.com/@silvion58" target="_blank">
+                        <i class="fa-brands fa-tiktok"></i></a>
+                </div>
+
+              
+
+
+            </div>
+
+  
+
+        </div>
+
+        <p class="end">© Created by Babuș Daniela and Hujan Samira. Acest website a fost realizat în cadrul
+            competiției „Tekwill Junior Ambassadors” organizată de proiectul „Tekwill în Fiecare
+            Școală” și nu reflectă neapărat opinia proiectului.</p>
+
+    </footer>
+    <div id="toast">Produs adăugat în coș</div>
+</body>
+
+</html>

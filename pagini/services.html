@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Silvion - Services</title>
+  <link rel="icon" href="../images/logotipa231.png" type="image/png">
+  <link rel="stylesheet" href="../style/style.css">
+  <script src="../javascript/magia.js" defer></script>
+  <link href='https://fonts.googleapis.com/css?family=Cinzel Decorative' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <section>
+    <nav id="navbar">
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul>
+        <li><a href="aboutus.html">About us</a></li>
+        <li><a href="../index.html">Home</a></li>
+        <li class="whyus_first_grade"><a href="whyus.html">WHY US</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="#contactus">Contact us</a></li>
+      </ul>
+      <div class="icon" id="cartIcon">
+        <i class="fa-solid fa-cart-shopping"></i>
+      </div>
+
+      <div class="contact-phone">
+    <a href="tel:+37360262000">
+        <i class="fa-solid fa-phone"></i> +373 60 262 000
+    </a>
+</div>
+    </nav>
+
+
+
+
+    <div class="services-section">
+      <h2>Ce îți putem propune noi?</h2>
+<p class="services-quote">Serviciile oferite sunt asigurate de personalul nostru. Pentru detalii, ne puteți contacta!</p>
+      <div class="services-divider"></div>
+
+
+      <div class="services-boxes-content">
+  <div class="services-boxes">
+    <div class="box active" data-target="service1">1</div>
+    <div class="box" data-target="service2">2</div>
+    <div class="box" data-target="service3">3</div>
+    <div class="box" data-target="service4">4</div>
+  </div>
+
+  <div class="services-content">
+    <img src="../images/service1.jpg" class="content-img active" id="service1" alt="Serviciu 1">
+    <img src="../images/service2.jpg" class="content-img" id="service2" alt="Serviciu 2">
+    <img src="../images/service3.jpg" class="content-img" id="service3" alt="Serviciu 3">
+    <img src="../images/service4.jpg" class="content-img" id="service4" alt="Serviciu 4">
+  </div>
+</div>
+
+    
+
+
+  </section>
+
+
+  <div class="cart" id="cart">
+    <span class="close-cart">&times;</span>
+    <h3>Coșul tău</h3>
+    <div id="cart-items"></div>
+    <hr>
+    <div id="total">Total: 0 Lei</div>
+    <button id="orderNowBtn">Comandă acum</button>
+  </div>
+  <hr>
+  <div id="title"></div>
+
+
+
+  <div id="orderModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Finalizează comanda</h2>
+      <form id="orderForm">
+        <label>Nume și Prenume:</label>
+        <input type="text" name="name" required>
+
+        <label>Email:</label>
+        <input type="email" name="email" required>
+
+        <label>Telefon:</label>
+        <input type="text" name="phone" required>
+
+        <label>Adresă:</label>
+        <input type="text" name="address" required>
+
+        <label>Mesaj / Notițe:</label>
+        <textarea name="message" rows="4"></textarea>
+
+        <button type="submit">Finalizează comanda</button>
+      </form>
+
+      <div id="orderSummary"></div>
+    </div>
+  </div>
+
+
+  <footer>
+    <div class="footer_main" id="contactus">
+      <div class="footer_tag">
+        <h2>Adresa</h2>
+        <p>Raionul Leova</p>
+        <p>Tigheci</p>
+        <p>Str. Ștefan cel Mare</p>
+        <p>MD-6329</p>
+      </div>
+
+      <div class="footer_tag">
+        <h2>Quick Link</h2>
+        <a href="aboutus.html">About us</a>
+        <a href="services.html">Services</a>
+        <a href="whyus.html">Why us</a>
+        <a href="menu.html">Menu</a>
+      </div>
+
+      <div class="footer_tag">
+        <h2>Contacte</h2>
+        <p>+373 60 262 000</p>
+        <p>silvion@gmail.com</p>
+      </div>
+
+      <div class="footer_tag">
+        <h2>Serviciile noastre</h2>
+        <p>Livrare rapidă</p>
+        <p>Achitare la primire</p>
+        <p>Receptibilitate</p>
+      </div>
+
+      <div class="footer_tag">
+        <h2>Urmărește-ne</h2>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/p/Silvion-100064272423143/" target="_blank">
+            <i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.facebook.com/silvia.timofti.1" target="_blank">
+            <i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.tiktok.com/@silvion58" target="_blank">
+            <i class="fa-brands fa-tiktok"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="end">© Created by Babuș Daniela and Hujan Samira. Acest website a fost realizat în cadrul
+      competiției „Tekwill Junior Ambassadors” organizată de proiectul „Tekwill în Fiecare
+      Școală” și nu reflectă neapărat opinia proiectului.</p>
+
+  </footer>
+</body>
+
+</html>
