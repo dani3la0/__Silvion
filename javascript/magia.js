@@ -18,9 +18,13 @@ if (navbar) {
 let addItemId = 0;
 let totalPrice = 0;
 
+let cartLoadedOnce = false;
+let savingCart = false;
+let updatingTotal = false;
+
 function saveCart() {
-  if (window.__savingCart) return;
-  window.__savingCart = true;
+  if (savingCart) return;
+  savingCart = true;
 
   const cartItems = [];
 
@@ -40,14 +44,18 @@ function saveCart() {
     const price = total / quantity;
 
     const img = item.querySelector('img');
-    const imgSrc = img ? img.src : '';
 
-    cartItems.push({ title, quantity, price, imgSrc });
+    cartItems.push({
+      title,
+      quantity,
+      price,
+      imgSrc: img ? img.src : ''
+    });
   });
 
   localStorage.setItem('cart', JSON.stringify(cartItems));
 
-  window.__savingCart = false;
+  savingCart = false;
 }
 
 function addToCart(item) {
@@ -70,28 +78,31 @@ function addToCart(item) {
 
   const delBtn = document.createElement('button');
   delBtn.innerText = 'Șterge';
+
   delBtn.onclick = function () {
     totalPrice -= price * quantity;
-    updateTotal();
     selectedItem.remove();
+    updateTotal();
     saveCart();
   };
 
   selectedItem.append(img, info, delBtn);
 
   const cartContainer = document.getElementById('cart-items');
-  if (cartContainer) {
-    cartContainer.append(selectedItem);
-  }
+  if (cartContainer) cartContainer.append(selectedItem);
+
+  totalPrice += price * quantity;
 
   showToast("Produs adăugat în coș");
 
-  totalPrice += price * quantity;
   updateTotal();
   saveCart();
 }
 
 function loadCart() {
+  if (cartLoadedOnce) return;
+  cartLoadedOnce = true;
+
   const cartItems = JSON.parse(localStorage.getItem('cart') || '[]');
 
   totalPrice = 0;
@@ -117,10 +128,11 @@ function loadCart() {
 
     const delBtn = document.createElement('button');
     delBtn.innerText = 'Șterge';
+
     delBtn.onclick = function () {
       totalPrice -= item.price * item.quantity;
-      updateTotal();
       selectedItem.remove();
+      updateTotal();
       saveCart();
     };
 
@@ -133,9 +145,38 @@ function loadCart() {
   updateTotal();
 }
 
+function updateTotal() {
+  if (updatingTotal) return;
+  updatingTotal = true;
+
+  const totalEl = document.getElementById('total');
+  if (totalEl) {
+    totalEl.innerText = `Total: ${totalPrice} Lei`;
+  }
+
+  const orderBtn = document.getElementById('orderNowBtn');
+  if (orderBtn) {
+    orderBtn.disabled = totalPrice <= 0;
+  }
+
+  updatingTotal = false;
+}
+
+function showToast(message) {
+  const toast = document.getElementById("toast");
+  if (!toast) return;
+
+  toast.innerText = message;
+  toast.classList.add("show");
+
+  setTimeout(() => {
+    toast.classList.remove("show");
+  }, 2000);
+}
+
 const cartIcon = document.getElementById('cartIcon');
 if (cartIcon) {
-  cartIcon.addEventListener('click', function () {
+  cartIcon.addEventListener('click', () => {
     const cart = document.getElementById('cart');
     if (cart) {
       cart.style.display = (cart.style.display === 'block') ? 'none' : 'block';
@@ -145,7 +186,7 @@ if (cartIcon) {
 
 const closeCart = document.querySelector('.close-cart');
 if (closeCart) {
-  closeCart.addEventListener('click', function () {
+  closeCart.addEventListener('click', () => {
     const cart = document.getElementById('cart');
     if (cart) cart.style.display = 'none';
   });
@@ -196,6 +237,7 @@ if (orderForm) {
 
     localStorage.removeItem('cart');
     totalPrice = 0;
+
     updateTotal();
 
     if (orderSummary) {
@@ -239,33 +281,6 @@ if (hamburger && navMenu) {
   });
 }
 
-function updateTotal() {
-  const totalEl = document.getElementById('total');
-  if (totalEl) {
-    totalEl.innerText = `Total: ${totalPrice} Lei`;
-  }
-
-  const orderBtn = document.getElementById('orderNowBtn');
-  if (orderBtn) {
-    orderBtn.disabled = totalPrice === 0;
-  }
-}
-
-function showToast(message) {
-  const toast = document.getElementById("toast");
-  if (!toast) return;
-
-  toast.innerText = message;
-  toast.classList.add("show");
-
-  setTimeout(() => {
-    toast.classList.remove("show");
-  }, 2000);
-}
-
 window.addEventListener('load', () => {
-  if (!window.__cartInitialized) {
-    window.__cartInitialized = true;
-    loadCart();
-  }
+  loadCart();
 });
