@@ -281,6 +281,13 @@ if (hamburger && navMenu) {
   });
 }
 
-window.addEventListener('load', () => {
+function initCart() {
+  const cartContainer = document.getElementById('cart-items');
+  const totalEl = document.getElementById('total');
+
+  if (!cartContainer || !totalEl) return;
+
   loadCart();
-});
+}
+
+window.addEventListener('DOMContentLoaded', initCart);
